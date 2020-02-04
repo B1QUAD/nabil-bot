@@ -131,7 +131,7 @@ bot.on('message', message => {
             message.channel.send("nice try");
         }
     } else if(message.content == "Nabil, show the yeet status") {
-        message.channel.send("Yeet status:\nAnubhav: " + yeetCount["Anubhav"] + " yeets\nNabil: " + yeetCount["Nabil"] + " yeets\nAdrian: " + yeetCount["Adrian"] + " yeets\nMitchell: " + yeetCount["Mitchell"] + " yeets\nDavid: " + yeetCount["David"] + " yeets\nNabil (the human one): :hitting_a_yeet: ");
+        message.channel.send("Yeet status:\nAnubhav: " + yeetCount["Anubhav"] + " yeets\nNabil: " + yeetCount["Nabil"] + " yeets\nAdrian: " + yeetCount["Adrian"] + " yeets\nMitchell: " + yeetCount["Mitchell"] + " yeets\nDavid: " + yeetCount["David"] + " yeets\nNabil (the human one): <:hitting_a_yeet:669406603237392385> ");
     }
 });
 
