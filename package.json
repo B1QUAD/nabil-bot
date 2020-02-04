@@ -1,0 +1,14 @@
+{
+  "name": "nabil-bot",
+  "version": "1.0.0",
+  "description": "A discord bot developed to temporarily replace a friend.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "Anubhav Aryal",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}
