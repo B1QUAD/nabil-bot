@@ -131,7 +131,28 @@ bot.on('message', message => {
             message.channel.send("nice try");
         }
     } else if(message.content == "Nabil, show the yeet status") {
-        message.channel.send("Yeet status:\nAnubhav: " + yeetCount["Anubhav"] + " yeets\nNabil: " + yeetCount["Nabil"] + " yeets\nAdrian: " + yeetCount["Adrian"] + " yeets\nMitchell: " + yeetCount["Mitchell"] + " yeets\nDavid: " + yeetCount["David"] + " yeets\nNabil (the human one): <:hitting_a_yeet:669406603237392385> ");
+        message.channel.send("Yeet status:\nAnubhav: " + yeetCount["Anubhav"] + " yeets\nNabil: " + yeetCount["Nabil"] + " yeets\nAdrian: " + yeetCount["Adrian"] + " yeets\nMitchell: " + yeetCount["Mitchell"] + " yeets\nDavid: " + yeetCount["David"] + " yeets\nNabil (the human one): :hitting_a_yeet: ");
+    } else if(message.content.startsWith("Nabil, engage banning sequence on")) {
+        var member = message.mentions.members.first();
+
+        if(member == null) {
+            message.reply("Since you specified no one, you are going to be banned in " + parseInt(Math.random() * 30 + 30) + " seconds.");
+        } else if(member.user.bot) {
+            message.reply("you thot.");
+        } else {
+            message.channel.send("Okay. Engaging banning sequence on <@" + member.id + ">");
+
+            var time = parseInt(Math.random() * 30 + 30);
+            
+
+            for(var i = time; i > 0; i++) {
+                setTimeout(() => {
+                    if(i % 5 == 0) {
+                        message.channel.send("Ban commences in " + i + " seconds.");
+                    }
+                }, 1000);
+            }
+        }
     }
 });
 
