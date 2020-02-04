@@ -134,15 +134,14 @@ bot.on('message', message => {
         message.channel.send("Yeet status:\nAnubhav: " + yeetCount["Anubhav"] + " yeets\nNabil: " + yeetCount["Nabil"] + " yeets\nAdrian: " + yeetCount["Adrian"] + " yeets\nMitchell: " + yeetCount["Mitchell"] + " yeets\nDavid: " + yeetCount["David"] + " yeets\nNabil (the human one): :hitting_a_yeet: ");
     } else if(message.content.startsWith("Nabil, engage banning sequence on")) {
         var member = message.mentions.members.first();
-        message.channel.send("starting up. member = " + member);
+        
         if(member == null) {
-            message.channel.send("Since you specified no one, you are going to be banned in " + parseInt(Math.random() * 30 + 30) + " seconds.");
+            message.reply("Since you specified no one, you are going to be banned in " + parseInt(Math.random() * 30 + 30) + " seconds.");
         } else if(member.user.bot) {
             message.reply("you thot.");
         } else {
-            message.channel.send("got into else");
             var mention = member.id;
-            message.channel.send(mention);
+            message.channel.send("bhjbqhwdbqhdjabshjdbajsdbjahbsdmmmm" + mention);
             message.channel.send("Okay. Engaging banning sequence on <@" + mention + ">");
 
             var time = parseInt(Math.random() * 30 + 30);
