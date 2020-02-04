@@ -140,7 +140,10 @@ bot.on('message', message => {
         } else if(member.user.bot) {
             message.reply("you thot.");
         } else {
-            message.channel.send("Okay. Engaging banning sequence on <@" + member.user.id + ">");
+            message.channel.send("got into else");
+            var mention = member.id;
+            message.channel.send(mention);
+            message.channel.send("Okay. Engaging banning sequence on <@" + mention + ">");
 
             var time = parseInt(Math.random() * 30 + 30);
             
